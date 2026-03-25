@@ -1,4 +1,7 @@
 - [首页](README.md)
+- [快速开始](QUICKSTART.md)
+- [贡献指南](CONTRIBUTING.md)
+- [内容计划](CONTENT_PLAN.md)
 
 - **Anthropic 官方**
   - [Harness 设计深度解析](article.md)
@@ -8,6 +11,10 @@
 - **Everything Claude Code**
   - [ECC 架构指南](bighat-ecc-zh.md)
   - [英文原文](bighat-ecc-en.md)
+
+- **示例代码**
+  - [最小 Harness](examples/minimal-harness/)
+  - [前端设计 Harness](examples/frontend-harness/)
 
 - **架构图解**
   - [多智能体架构](diagram.png)
