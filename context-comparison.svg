@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="problem" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fca5a5"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+    <linearGradient id="solution" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#86efac"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#1e293b">
+    上下文管理策略对比
+  </text>
+  
+  <!-- Left: Context Anxiety Problem -->
+  <g transform="translate(50, 70)">
+    <text x="175" y="0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#dc2626">
+      ❌ 问题：上下文焦虑
+    </text>
+    
+    <!-- Context window representation -->
+    <rect x="50" y="30" width="250" height="300" fill="white" stroke="#cbd5e1" stroke-width="2" rx="4"/>
+    <text x="175" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">上下文窗口</text>
+    
+    <!-- Filling up -->
+    <rect x="60" y="70" width="230" height="40" fill="#dbeafe" stroke="#3b82f6" stroke-width="1" rx="2"/>
+    <text x="175" y="95" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af">对话历史</text>
+    
+    <rect x="60" y="120" width="230" height="40" fill="#dbeafe" stroke="#3b82f6" stroke-width="1" rx="2"/>
+    <text x="175" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af">任务执行</text>
+    
+    <rect x="60" y="170" width="230" height="40" fill="#dbeafe" stroke="#3b82f6" stroke-width="1" rx="2"/>
+    <text x="175" y="195" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af">中间结果</text>
+    
+    <!-- Anxiety zone -->
+    <rect x="60" y="220" width="230" height="80" fill="url(#problem)" opacity="0.3" rx="2"/>
+    <text x="175" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#dc2626" font-weight="600">⚠️ 焦虑区</text>
+    <text x="175" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#991b1b">模型提前结束工作</text>
+    
+    <!-- Arrow showing premature end -->
+    <path d="M 175 310 L 175 340" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="175" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626">任务未完成</text>
+  </g>
+  
+  <!-- Right: Context Reset Solution -->
+  <g transform="translate(425, 70)">
+    <text x="162" y="0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#16a34a">
+      ✅ 解决方案：上下文重置
+    </text>
+    
+    <!-- Session 1 -->
+    <rect x="25" y="30" width="130" height="120" fill="white" stroke="#cbd5e1" stroke-width="2" rx="4"/>
+    <text x="90" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">会话 1</text>
+    <rect x="35" y="65" width="110" height="30" fill="#dbeafe" stroke="#3b82f6" stroke-width="1" rx="2"/>
+    <text x="90" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#1e40af">任务执行</text>
+    <rect x="35" y="100" width="110" height="40" fill="#fef3c7" stroke="#f59e0b" stroke-width="1" rx="2"/>
+    <text x="90" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#92400e">生成产物</text>
+    <text x="90" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#92400e">+ 进度日志</text>
+    
+    <!-- Session 2 -->
+    <rect x="175" y="30" width="130" height="120" fill="white" stroke="#cbd5e1" stroke-width="2" rx="4"/>
+    <text x="240" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">会话 2</text>
+    <rect x="185" y="65" width="110" height="30" fill="#dbeafe" stroke="#3b82f6" stroke-width="1" rx="2"/>
+    <text x="240" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#1e40af">任务执行</text>
+    <rect x="185" y="100" width="110" height="40" fill="#fef3c7" stroke="#f59e0b" stroke-width="1" rx="2"/>
+    <text x="240" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#92400e">生成产物</text>
+    <text x="240" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#92400e">+ 进度日志</text>
+    
+    <!-- Handoff arrow -->
+    <path d="M 155 90 L 175 90" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="165" y="85" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#16a34a">传递</text>
+    
+    <!-- Session 3 -->
+    <rect x="100" y="170" width="130" height="120" fill="white" stroke="#cbd5e1" stroke-width="2" rx="4"/>
+    <text x="165" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">会话 3</text>
+    <rect x="110" y="205" width="110" height="30" fill="#dbeafe" stroke="#3b82f6" stroke-width="1" rx="2"/>
+    <text x="165" y="223" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#1e40af">任务执行</text>
+    <rect x="110" y="240" width="110" height="40" fill="#dcfce7" stroke="#22c55e" stroke-width="1" rx="2"/>
+    <text x="165" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#166534" font-weight="600">✓ 完成</text>
+    
+    <!-- Handoff arrows -->
+    <path d="M 90 150 L 130 170" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 240 150 L 200 170" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Clean slate indicator -->
+    <rect x="25" y="310" width="280" height="60" fill="url(#solution)" opacity="0.2" rx="4" stroke="#22c55e" stroke-width="1"/>
+    <text x="165" y="335" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#166534" font-weight="600">每个会话都是"干净 slate"</text>
+    <text x="165" y="355" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#166534">通过结构化产物传递状态，避免上下文填满</text>
+  </g>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <!-- Bottom note -->
+  <text x="400" y="480" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">
+    注：Claude Opus 4.5 已大幅改善上下文焦虑，可单会话连续运行，依靠自动压缩管理上下文
+  </text>
+</svg>

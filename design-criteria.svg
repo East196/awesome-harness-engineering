@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="high" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#86efac"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+    <linearGradient id="medium" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fde047"/>
+      <stop offset="100%" style="stop-color:#eab308"/>
+    </linearGradient>
+    <linearGradient id="low" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fca5a5"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#1e293b">
+    前端设计评估四维标准
+  </text>
+  <text x="400" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">
+    将主观美学转化为可量化的评分指标
+  </text>
+  
+  <!-- Criteria 1: Design Quality -->
+  <g transform="translate(50, 90)">
+    <rect width="340" height="140" fill="white" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    <rect width="340" height="35" fill="url(#high)" rx="8"/>
+    <rect width="340" height="35" fill="url(#high)" rx="8"/>
+    <text x="20" y="24" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#166534">
+      1. 设计质量 (Design Quality) — 高权重 ⭐⭐⭐
+    </text>
+    <text x="20" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 设计是否像一个统一的整体，而非零件拼凑？
+    </text>
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 色彩、字体、布局、图像是否融合成独特氛围？
+    </text>
+    <text x="20" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 是否创造出 distinct mood and identity？
+    </text>
+    <text x="20" y="125" font-family="system-ui, sans-serif" font-size="10" fill="#16a34a" font-style="italic">
+      💡 Claude 默认表现较弱，需要重点优化
+    </text>
+  </g>
+  
+  <!-- Criteria 2: Originality -->
+  <g transform="translate(410, 90)">
+    <rect width="340" height="140" fill="white" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    <rect width="340" height="35" fill="url(#high)" rx="8"/>
+    <text x="20" y="24" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#166534">
+      2. 原创性 (Originality) — 高权重 ⭐⭐⭐
+    </text>
+    <text x="20" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 是否有定制的创意决策，还是套用模板？
+    </text>
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 人类设计师能否识别出刻意的创意选择？
+    </text>
+    <text x="20" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 是否避免"AI slop"（如紫色渐变配白卡片）？
+    </text>
+    <text x="20" y="125" font-family="system-ui, sans-serif" font-size="10" fill="#16a34a" font-style="italic">
+      💡 明确惩罚高度通用的"AI 生成痕迹"
+    </text>
+  </g>
+  
+  <!-- Criteria 3: Craft -->
+  <g transform="translate(50, 250)">
+    <rect width="340" height="140" fill="white" stroke="#eab308" stroke-width="2" rx="8"/>
+    <rect width="340" height="35" fill="url(#medium)" rx="8"/>
+    <text x="20" y="24" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#854d0e">
+      3. 工艺 (Craft) — 中等权重 ⭐⭐
+    </text>
+    <text x="20" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 技术执行：排版层级、间距一致性
+    </text>
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 色彩和谐、对比度达标
+    </text>
+    <text x="20" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 基础能力检查，而非创意检查
+    </text>
+    <text x="20" y="125" font-family="system-ui, sans-serif" font-size="10" fill="#a16207" font-style="italic">
+      ✅ Claude 默认表现良好
+    </text>
+  </g>
+  
+  <!-- Criteria 4: Functionality -->
+  <g transform="translate(410, 250)">
+    <rect width="340" height="140" fill="white" stroke="#eab308" stroke-width="2" rx="8"/>
+    <rect width="340" height="35" fill="url(#medium)" rx="8"/>
+    <text x="20" y="24" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#854d0e">
+      4. 功能性 (Functionality) — 中等权重 ⭐⭐
+    </text>
+    <text x="20" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 用户能否理解界面功能？
+    </text>
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 能否找到主要操作并完成任务？
+    </text>
+    <text x="20" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#374151">
+      • 可用性独立于美学
+    </text>
+    <text x="20" y="125" font-family="system-ui, sans-serif" font-size="10" fill="#a16207" font-style="italic">
+      ✅ Claude 默认表现良好
+    </text>
+  </g>
+  
+  <!-- Bottom insight -->
+  <rect x="50" y="410" width="700" height="30" fill="#eff6ff" stroke="#3b82f6" stroke-width="1" rx="4"/>
+  <text x="400" y="430" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1e40af">
+    关键洞察：通过加权设计质量和原创性，推动模型从"安全但平庸"走向"有美学风险但独特"
+  </text>
+</svg>
