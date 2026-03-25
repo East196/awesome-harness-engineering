@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Awesome Harness Engineering</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="AI Agent Harness 工程实践精选 - 多智能体架构、持续学习系统、企业级应用">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    :root {
+      --theme-color: #3b82f6;
+      --theme-color-secondary: #10b981;
+    }
+    .sidebar {
+      background-color: #f8fafc;
+    }
+    .sidebar-nav a {
+      color: #475569;
+    }
+    .sidebar-nav a:hover {
+      color: var(--theme-color);
+    }
+    .sidebar-nav li.active > a {
+      color: var(--theme-color);
+      font-weight: 600;
+    }
+    .markdown-section h1 {
+      color: #1e293b;
+      border-bottom: 2px solid var(--theme-color);
+      padding-bottom: 0.3em;
+    }
+    .markdown-section h2 {
+      color: #334155;
+      border-left: 4px solid var(--theme-color);
+      padding-left: 0.5em;
+    }
+    .markdown-section h3 {
+      color: #475569;
+    }
+    .markdown-section img {
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color-secondary);
+      background-color: #f0fdf4;
+      padding: 1em;
+      border-radius: 0 8px 8px 0;
+    }
+    .markdown-section code {
+      background-color: #f1f5f9;
+      color: #ef4444;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+    }
+    .markdown-section pre code {
+      background-color: #1e293b;
+      color: #e2e8f0;
+    }
+    .github-corner svg {
+      fill: var(--theme-color);
+    }
+    .app-name-link img {
+      max-height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Awesome Harness Engineering',
+      repo: 'East196/awesome-harness-engineering',
+      homepage: 'README.md',
+      loadSidebar: true,
+      loadNavbar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜索文档...',
+        noData: '未找到结果',
+        depth: 6,
+        hideOtherSidebarContent: false
+      },
+      copyCode: {
+        buttonText: '复制',
+        errorText: '失败',
+        successText: '已复制'
+      },
+      pagination: {
+        previousText: '上一篇',
+        nextText: '下一篇',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function(html) {
+            if (/githubusercontent\.com/.test(vm.route.file)) {
+              url = vm.route.file
+                .replace('raw.githubusercontent.com', 'github.com')
+                .replace(/\/master/, '/blob/master')
+            } else {
+              url = 'https://github.com/East196/awesome-harness-engineering/blob/main/' + vm.route.file
+            }
+            var editHtml = '[:memo: 编辑文档](' + url + ')\n'
+            return editHtml + html
+          })
+        }
+      ]
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Search -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- Copy Code -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <!-- Pagination -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+  <!-- Emoji -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- Zoom Image -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+</body>
+</html>
