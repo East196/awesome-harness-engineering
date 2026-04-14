@@ -124,8 +124,8 @@ class TestEvaluatorAgent:
         # Create an instance to check fields
         result = EvaluationResult(
             quality_score=0.8,
-            functionality="Works as expected",
-            code_quality="Clean and readable",
+            functionality=0.9,
+            code_quality=0.85,
             feedback="Minor suggestions",
             passed=True
         )
@@ -141,7 +141,7 @@ class TestEvaluatorAgent:
         """Test that evaluate returns an EvaluationResult instance."""
         from agents.evaluator import EvaluatorAgent, EvaluationResult
         
-        mock_call.return_value = '{"quality_score": 0.9, "functionality": "OK", "code_quality": "Good", "feedback": "Nice", "passed": true}'
+        mock_call.return_value = '{"quality_score": 0.9, "functionality": 0.8, "code_quality": 0.85, "feedback": "Nice", "passed": true}'
         agent = EvaluatorAgent()
         
         code = "def hello():\n    print('Hello')"

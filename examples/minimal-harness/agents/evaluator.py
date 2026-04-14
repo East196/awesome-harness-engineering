@@ -1,6 +1,5 @@
 """EvaluatorAgent: Evaluates code against TaskSpec using structured output."""
 import json
-from typing import Optional
 
 from pydantic import BaseModel
 
@@ -19,8 +18,8 @@ class EvaluationResult(BaseModel):
     """
     
     quality_score: float
-    functionality: str
-    code_quality: str
+    functionality: float
+    code_quality: float
     feedback: str
     passed: bool
 
@@ -44,8 +43,8 @@ class EvaluatorAgent(BaseAgent):
             "3. Completeness - Does it meet all acceptance criteria?\n\n"
             "IMPORTANT: You must respond with valid JSON only. The JSON must include:\n"
             "- quality_score: A float between 0.0 and 1.0\n"
-            "- functionality: A string describing functional compliance\n"
-            "- code_quality: A string describing code quality\n"
+            "- functionality: A float between 0.0 and 1.0\n"
+            "- code_quality: A float between 0.0 and 1.0\n"
             "- feedback: A string with constructive feedback\n"
             "- passed: A boolean indicating if the code meets criteria\n\n"
             "Respond with JSON only."
@@ -85,8 +84,8 @@ class EvaluatorAgent(BaseAgent):
                 # Return a failure result if we can't parse
                 return EvaluationResult(
                     quality_score=0.0,
-                    functionality="Failed to parse evaluation response",
-                    code_quality="Unknown",
+                    functionality=0.0,
+                    code_quality=0.0,
                     feedback=f"Could not parse response: {response[:200]}",
                     passed=False
                 )

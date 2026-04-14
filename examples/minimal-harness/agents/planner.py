@@ -1,6 +1,5 @@
 """PlannerAgent: Converts user prompt to TaskSpec JSON."""
 import json
-from typing import Optional
 
 from agents.base import BaseAgent
 
