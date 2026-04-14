@@ -151,7 +151,7 @@ python harness.py
 - 📚 [阅读完整文档](https://east196.github.io/awesome-harness-engineering)
 - 🔍 [查看示例代码](examples/)
 - 🎨 [尝试前端设计 Harness](examples/frontend-harness/)
-- 🏗️ [了解全栈开发 Harness](examples/fullstack-harness/)
+- 🏗️ 全栈开发 Harness — 规划中（Phase 3）
 
 ---
 
