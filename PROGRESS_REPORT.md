@@ -32,18 +32,19 @@
 
 | 示例 | 文件 | 说明 |
 |------|------|------|
-| 最小 Harness | `examples/minimal-harness/` | 核心实现 + 使用示例 |
+| 最小 Harness | `examples/minimal-harness/` | mock 实现 + 使用示例（Phase 2 升级） |
 | 前端设计 | `examples/frontend-harness/` | 设计评估标准 |
 
 #### 1.4 示例代码详情
 
 **minimal-harness/**:
-- ✅ `core/harness.py` - 核心 Harness 类（660 行）
+- ⚠️ `core/harness.py` - 核心实现（256行，mock 实现，Phase 2 将升级为真实 LLM 调用）
 - ✅ `examples/simple_task.py` - 可运行示例
 - ✅ `README.md` - 详细文档
 - ✅ `config.yaml` - 配置文件模板
 - ✅ `requirements.txt` - 依赖列表
 - ✅ `.env.example` - 环境变量模板
+- ❌ `agents/` - 目录不存在（Phase 2 实现）
 
 **frontend-harness/**:
 - ✅ `README.md` - 设计评估标准文档
@@ -74,7 +75,7 @@
 
 ```
 总文件数: 30+
-代码行数: ~2000 行
+代码行数: ~800 行（含 mock 实现）
 文档字数: ~40000 字
 图片数量: 6 张
 ```
@@ -130,23 +131,29 @@ c1893a6 Add content plan and minimal harness example
 
 ## 📋 Phase 2 待办（建议）
 
-### 2.1 进阶主题
+### 2.1 核心实现
+- [ ] 实现 `agents/planner.py` — 真实 LLM-powered 规划器
+- [ ] 实现 `agents/generator.py` — 真实代码生成
+- [ ] 实现 `agents/evaluator.py` — Outlines 结构化评分
+- [ ] 重写 `core/harness.py` 连接真实 Agent
+
+### 2.2 进阶主题
 - [ ] 上下文工程深度解析
 - [ ] Token 优化策略
 - [ ] 长上下文管理最佳实践
 - [ ] Agent 记忆系统设计
 
-### 2.2 性能优化
+### 2.3 性能优化
 - [ ] 成本优化指南
 - [ ] 延迟优化技巧
 - [ ] 并发处理模式
 
-### 2.3 安全专题
+### 2.4 安全专题
 - [ ] Agent 安全扫描
 - [ ] 提示注入防护
 - [ ] 权限管理最佳实践
 
-### 2.4 工具链整合
+### 2.5 工具链整合
 - [ ] CI/CD 集成指南
 - [ ] GitHub Actions 工作流
 - [ ] 监控和日志方案
@@ -156,7 +163,7 @@ c1893a6 Add content plan and minimal harness example
 ## 🌟 亮点
 
 1. **完整的文档体系** - 从快速开始到贡献指南
-2. **可运行的代码** - 最小 Harness 示例可直接运行
+2. **最小 Harness 示例** - 可运行但为 mock 实现（Phase 2 升级为真实 LLM）
 3. **双语内容** - 中英文技术文章对照
 4. **可视化图解** - 3 张架构图帮助理解
 5. **现代化站点** - Docsify 构建，支持搜索和导航
