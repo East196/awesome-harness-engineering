@@ -99,6 +99,7 @@ python3 -m http.server 3000
 
 - [Anthropic Engineering Blog](https://www.anthropic.com/engineering)
 - [Claude Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview)
+- [ax](https://github.com/Necmttn/ax) - 本地 AI 编程代理遥测与召回图，摄取多种 Harness 的会话、工具调用、技能和使用信号
 - [Everything Claude Code](https://github.com/affaan-m/everything-claude-code)
 - [Big Hat Group Analysis](https://www.bighatgroup.com/blog/everything-claude-code-ai-agent-harness-guide/)
 
