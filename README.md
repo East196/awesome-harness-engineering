@@ -101,6 +101,7 @@ python3 -m http.server 3000
 - [Claude Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview)
 - [Everything Claude Code](https://github.com/affaan-m/everything-claude-code)
 - [Big Hat Group Analysis](https://www.bighatgroup.com/blog/everything-claude-code-ai-agent-harness-guide/)
+- [ClawBench](https://github.com/TIGER-AI-Lab/ClawBench) - 用于评估浏览器 Agent 在真实网站任务中可靠性的开源基准，包含执行轨迹和提交拦截机制。
 
 ---
 
